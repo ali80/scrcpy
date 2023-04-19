@@ -50,7 +50,7 @@ public final class AudioCapture {
             // On older APIs, Workarounds.fillAppInfo() must be called beforehand
             builder.setContext(FakeContext.get());
         }
-        builder.setAudioSource(MediaRecorder.AudioSource.REMOTE_SUBMIX);
+        builder.setAudioSource(MediaRecorder.AudioSource.MIC);
         builder.setAudioFormat(createAudioFormat());
         int minBufferSize = AudioRecord.getMinBufferSize(SAMPLE_RATE, CHANNEL_CONFIG, FORMAT);
         // This buffer size does not impact latency
